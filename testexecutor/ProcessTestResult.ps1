@@ -73,10 +73,10 @@ foreach($testcase in $testcases)
         #Set-ExecutionPolicy RemoteSigned
         
         ##Record the new error
-        #$details = @{
-        #    Testcase = $TestcaseFullPath
-        #    ErrorMessage =  $ErrorMessage
-        #}
+        $details = @{
+           Testcase = $TestcaseFullPath
+           ErrorMessage =  $ErrorMessage
+        }
         $newerror += New-Object PSObject -Property $details        
 
         ## Check if the error is already known yesterday##
